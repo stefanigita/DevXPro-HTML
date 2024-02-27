@@ -16,7 +16,9 @@
   --dl-color-primary-100: #c172d5ff;
   --dl-color-primary-500: #ac43c7ff;
   --dl-color-primary-700: #9534adff;
+  --dl-color-scheme-white: #FFFFFF;
   --dl-size-size-halfunit: 0.5rem;
+  --dl-size-size-maxwidth: 1158px;
   --dl-color-secondary-100: #d2d6daff;
   --dl-color-secondary-200: #8392abff;
   --dl-color-secondary-300: #808fbfff;
@@ -29,6 +31,7 @@
   --dl-size-size-tripleunit: 3rem;
   --dl-space-space-halfunit: 0.5rem;
   --dl-space-space-sixunits: 6rem;
+  --dl-color-scheme-darkgray: #9095a7ff;
   --dl-radius-radius-radius1: 1rem;
   --dl-radius-radius-radius5: 0.5rem;
   --dl-space-space-fourunits: 4rem;
@@ -39,6 +42,7 @@
   --dl-space-space-tripleunit: 3rem;
   --dl-space-space-twelveunits: 12rem;
   --dl-size-size-triplequarterunit: 0.75rem;
+  --dl-space-space-oneandhalfunits: 24px;
   --dl-space-space-unitandahalfunit: 1.5rem;
   --dl-space-space-triplequarterunit: 0.75rem;
 }
@@ -88,6 +92,41 @@
   border-width: 1px;
   border-radius: 4px;
   background-color: var(--dl-color-gray-white);
+}
+.max-content-container {
+  width: 100%;
+  display: flex;
+  max-width: var(--dl-size-size-maxwidth);
+  align-items: center;
+  padding-left: var(--dl-space-space-oneandhalfunits);
+  padding-right: var(--dl-space-space-oneandhalfunits);
+  justify-content: center;
+}
+.slide {
+  height: 100%;
+  display: flex;
+  min-width: 60%;
+  align-items: flex-start;
+  margin-left: var(--dl-space-space-unit);
+  margin-right: var(--dl-space-space-unit);
+  flex-direction: column;
+}
+.section-container {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-sixunits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-sixunits);
+}
+.Heading2 {
+  font-size: 42px;
+  font-family: IBM Plex Sans Condensed;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 .Small {
   font-size: 0.875rem;
@@ -170,3 +209,16 @@
   letter-spacing: -0.025rem;
   text-transform: uppercase;
 }
+@media(max-width: 991px) {
+  .slide {
+    min-width: 75%;
+  }
+}
+@media(max-width: 767px) {
+  .slide {
+    min-width: 80%;
+    margin-left: var(--dl-space-space-halfunit);
+    margin-right: var(--dl-space-space-halfunit);
+  }
+}
+
